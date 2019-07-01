@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AgencyPepsi.ViewModels"
+             xmlns:i18n="clr-namespace:AgencyPepsi.Helpers"
+              BackgroundColor="#D5E7FA" x:Class="AgencyPepsi.Views.Allorder"
+             Title="Order Case">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Label HeightRequest="40"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Select Customer" 
+                          BackgroundColor="Navy"
+                          TextColor="White" 
+                          FontSize="15" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+            <Label HeightRequest="40"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Start Date" 
+                          BackgroundColor="Navy"
+                          TextColor="White" 
+                          FontSize="15" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+            <DatePicker x:Name="columnDatePickerOne" MinimumDate="2011/01/20"
+            MaximumDate="2020/12/31"
+            Date="2019/01/01"/>
+
+            <Button x:Name="btnView" Clicked="View_Clicked" HeightRequest="35" HorizontalOptions="End" Text="View" FontSize="10" BorderRadius="10"  BackgroundColor="Red" TextColor="White" />
+            <ListView x:Name="OrderSummaryList" Margin="0,0,0,0" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="CenterAndExpand" Margin="10" Padding="1" BackgroundColor="Silver" RowSpacing="1" ColumnSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="Total Order Case" TextColor="Black" FontSize="15"  Grid.Row="0" Style="{DynamicResource headerTablet}"/>
+                                <Label Text="Order Date" TextColor="Black" Grid.Column="1" FontSize="15"  Grid.Row="0"  Style="{DynamicResource headerTablet}"/>
+
+                                <Label Text="{Binding TotalOrder}" TextColor="Black" Grid.Column="0" Grid.Row="1" Style="{DynamicResource detailTablet}"/>
+                                <Label Text="{Binding Dateval}" TextColor="Black" Grid.Column="1" Grid.Row="1"  Style="{DynamicResource detailTablet}"/>
+
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

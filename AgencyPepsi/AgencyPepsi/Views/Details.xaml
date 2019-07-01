@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgencyPepsi.Views.Details"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:AgencyPepsi.ViewModels"
+             Title="Update Info">
+
+   
+
+
+    <StackLayout>
+        <ListView x:Name="LV"
+              CachingStrategy="RecycleElement"
+              RowHeight="60">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="*"/>
+
+                            </Grid.ColumnDefinitions>
+                            <Label
+                        Grid.Column="0"
+                        Text="{Binding OrderCase}"
+                        TextColor="Black"
+                        VerticalOptions="Center">
+                            </Label>
+                            <Label
+                        Grid.Column="1"
+                        Text="{Binding OrderDate}"
+                        TextColor="Black"
+                        VerticalOptions="Center">
+                            </Label>
+                        
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+
+    </StackLayout>
+
+</ContentPage>

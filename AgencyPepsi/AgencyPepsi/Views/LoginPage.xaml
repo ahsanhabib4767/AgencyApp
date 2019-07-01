@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              BackgroundColor="#D5E7FA" x:Class="AgencyPepsi.Views.LoginPage"
+             Title="Login Here">
+  
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#ff3467</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" >
+
+                <Label HeightRequest="50"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="Pepsi Agency App" 
+                          BackgroundColor="Navy"
+                          TextColor="White" 
+                          FontSize="20" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+                <Entry  Margin="20,40,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="User Name" Text="{Binding Username}">
+                    
+                </Entry>
+
+                <Entry Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password" Text="{Binding Password}">
+                    
+                </Entry>
+
+                <Button Margin="20,0,20,0" 
+                         HeightRequest="40" 
+                         TextColor="White" 
+                         Text="Login"  
+                         BackgroundColor="Navy"
+                         HorizontalOptions="FillAndExpand" Command="{Binding LoginCommand}" BorderRadius="10"/>
+
+                
+
+                <Label Text="Forgot password" 
+                        HorizontalOptions="Center" 
+                        TextColor="{StaticResource primary}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>  

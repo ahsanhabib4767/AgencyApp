@@ -1,0 +1,11 @@
+FormsViewGroup
+Newtonsoft.Json
+Plugin.Settings.Abstractions
+Plugin.Settings
+System.Net.Http.Extensions
+System.Net.Http.Primitives
+System.Runtime
+Xamarin.Forms.Core
+Xamarin.Forms.Platform.Android
+Xamarin.Forms.Platform
+Xamarin.Forms.Xaml

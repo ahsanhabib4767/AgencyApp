@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AgencyPepsi.ViewModels"
+             xmlns:i18n="clr-namespace:AgencyPepsi.Helpers"
+              BackgroundColor="#D5E7FA" x:Class="AgencyPepsi.Views.HomePage"
+             Title="Home Page">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#ff3467</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  <ContentPage.Content>
+  <StackLayout>
+    <Label Text="{Binding user}" HorizontalOptions="FillAndExpand" TextColor="Gray" BackgroundColor="Aqua"/>
+            <Button Text="Logout" Margin="20,0,20,0" HorizontalOptions="FillAndExpand" BorderRadius="10" TextColor="Blue" Command="{Binding LogoutCommand}" HeightRequest="40"  BackgroundColor="White"/>
+          
+
+           
+            
+            <!--<Button x:Name="btn2View" Clicked="Customer_View_Clicked" HeightRequest="35" HorizontalOptions="Start" Text="Customer List" FontSize="10" BorderRadius="10"  BackgroundColor="Blue" TextColor="White" />-->
+            <Button x:Name="btn2View" Margin="20,0,20,0" Clicked="Customer_View_Clicked" 
+                         HeightRequest="40" 
+                         TextColor="White" 
+                         Text="Order Case"  
+                         BackgroundColor="Navy"
+                         HorizontalOptions="FillAndExpand" BorderRadius="10"/>
+            <Button Margin="20,0,20,0" Clicked="Customerall_View_Clicked" 
+                         HeightRequest="40" 
+                         TextColor="White" 
+                         Text="All Customers total"  
+                         BackgroundColor="Navy"
+                         HorizontalOptions="FillAndExpand" BorderRadius="10"/>
+
+        </StackLayout>   
+    </ContentPage.Content> 
+</ContentPage>
